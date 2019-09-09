@@ -1,0 +1,98 @@
+body {
+  font-family: 'Source Sans Pro', san-serif;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: #0098db;
+}
+
+.contenedor {
+  width: 500px;
+  margin: 20px 0;
+}
+
+.inputWrapper {
+  width: 100%;
+  display: flex;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: solid 1px #CCC;
+  flex: 1 1 auto;
+  color: #333;
+  font-weight: 300;
+}
+
+.input:focus,
+.input:active {
+  outline: none;
+  border-color: #0098db;
+}
+
+.button {
+  margin-left: 20px;
+  background: #0098db;
+  border: none;
+  border-radius: 20px;
+  /* padding: 10px 12px; */
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.button:focus,
+.button:active {
+  outline: none;
+}
+
+.lista {
+  padding: 0;
+  margin: 20px;
+  list-style: none;
+}
+
+.lista li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: solid 1px #ededed;
+}
+
+.lista li:last-of-type {
+  border-bottom: none;
+}
+
+.checkbox {
+  color: #0098db;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.checkbox i {
+  visibility: hidden;
+}
+
+.descripcion {
+  flex: 1 1 auto;
+}
+
+
+.lista li.done .checkbox i {
+  visibility: visible;
+}
+
+.lista li.done .descripcion {
+  text-decoration: line-through;
+}
