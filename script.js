@@ -13,8 +13,14 @@ function imprimirPendiente(pendiente, index) {
                 <i class="fa fa-check"></i>
             </div>
             <div class="descripcion">`+ pendiente.descripcion + `</div>
+            <i class="fa fa-times" onClick="eliminarPendiente(`+ index + `)"></i>
         </li>`
     );
+}
+
+function eliminarPendiente(index) {
+    pendientes.splice(index, 1);
+    imprimirTodosLosPendientes();
 }
 
 function estaCompletado(completado) {
@@ -35,6 +41,12 @@ function marcarCompletado(index) {
 function imprimirTodosLosPendientes() {
     document.getElementById("lista").innerHTML = "";
     pendientes.forEach(imprimirPendiente);
+}
+
+function agregarPendiente() {
+    var pendiente = document.getElementById("item").value;
+    pendientes.push({ descripcion: pendiente, completado: false });
+    imprimirTodosLosPendientes();
 }
 
 imprimirTodosLosPendientes();
