@@ -13,8 +13,14 @@ function imprimirPendiente(pendiente, index) {
                 <i class="fa fa-check"></i>
             </div>
             <div class="descripcion">`+ pendiente.descripcion + `</div>
+            <i class="fa fa-times" onClick="eliminarPendiente(`+ index + `)"></i>
         </li>`
     );
+}
+
+function eliminarPendiente(index) {
+    pendientes.splice(index, 1);
+    imprimirTodosLosPendientes();
 }
 
 function estaCompletado(completado) {
